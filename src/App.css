@@ -27,7 +27,7 @@ body {
 }
 
 /* Tweak for narrower phones (360px and below) */
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .container {
     max-width: 100%;
     padding: 12px;

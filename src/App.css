@@ -1,19 +1,23 @@
+/* Base styles */
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #f4f4f4;
+  background: #eee;
 }
 
+/* Mobile-first container */
 .container {
   width: 100%;
-  max-width: 430px;
+  max-width: 390px; /* Matches iPhone 12 design */
   margin: 0 auto;
   padding: 16px;
-  background: white;
+  background: #fff;
   min-height: 100vh;
   box-sizing: border-box;
+  border: 1px solid #ccc;
 }
 
+/* Card styling */
 .card {
   background: #e0f7fa;
   padding: 16px;
@@ -22,13 +26,21 @@ body {
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-/* Optional: tweak for narrower screens */
+/* Tweak for narrower phones (360px and below) */
 @media (max-width: 360px) {
   .container {
+    max-width: 100%;
     padding: 12px;
   }
 
   .card {
     font-size: 1rem;
+  }
+}
+
+/* Expand layout on wider screens (≥ 768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
   }
 }
